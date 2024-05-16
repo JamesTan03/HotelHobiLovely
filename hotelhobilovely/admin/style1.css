@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Garamond, serif;
+}
+
+/* Style the header */
+header {
+  background-image: url(loveyourself.png);
+  background-size: cover;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that float next to each other */
+nav {
+  display: flex;
+  justify-content: center;
+  float: left;
+  width: 100%;
+  background-color: #FC4A1A;
+  color: white;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+nav li {
+  float: none;
+}
+
+nav li a {
+  width: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+nav li a:hover,
+nav li a:focus,
+nav li a:target {
+  background-color: #9ecbf2;
+}
+
+nav li a:target {
+  background-color: #D35400;
+}
+
+nav .active {
+  background-color: #f263b2;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 67%;
+  background-color: #F6F6F6;
+}
+
+aside {
+  float: left;
+  margin: auto;
+  width: 33%;
+  height: 100%;
+  border: 1px dotted grey;
+  padding: 20px 20px 25px 30px;
+  background-color: #DDB0EB;
+  min-height: 250px;
+}
+
+section {
+  background-color: #F6F6F6;
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+  background-color: #F6F6F6;
+}
+
+.center {
+  display: inline-block;
+  margin: 10px; /* Adjust the margin as needed */
+}
+
+.slideshow-container {
+  max-width: 80%;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+  width: 80%;
+}
+
+img {
+  width: 80%;
+  border-radius: 10px;
+}
+
+/* Style the footer */
+footer {
+  background-color: #ffd4cc;
+  padding: 10px;
+  text-align: center;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav,
+  article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+p {
+  font-size: 20px;
+  text-align: justify;
+}
